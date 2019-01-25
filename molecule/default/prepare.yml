@@ -1,0 +1,11 @@
+---
+- name: Prepare
+  hosts: all
+  become: true
+  vars:
+    apt_install_packages:
+      - name: gnupg
+      - name: apt-transport-https
+      - name: haveged
+  roles:
+    - calvinbui.ansible_apt

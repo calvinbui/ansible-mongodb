@@ -1,0 +1,4 @@
+---
+
+mongodb_version: '3.4'
+mongodb_ubuntu_version: 'xenial'

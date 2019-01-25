@@ -1,0 +1,25 @@
+---
+
+- name: Add MongoDB {{ mongodb_version }} GPG Key
+  apt_key:
+    url: "https://www.mongodb.org/static/pgp/server-{{ mongodb_version }}.asc"
+    state: present
+  register: result
+  until: result is success
+  retries: 5
+  delay: 5
+
+- name: Add MongoDB {{ mongodb_version }} source
+  template:
+    src: mongodb-org.list.j2
+    dest: "/etc/apt/sources.list.d/mongodb-org-{{ mongodb_version }}.list"
+
+- name: Install MongoDB {{ mongodb_version }}
+  apt:
+    name: "mongodb-org={{ mongodb_version }}*"
+    state: present
+    update_cache: true
+  register: result
+  until: result is success
+  retries: 5
+  delay: 5

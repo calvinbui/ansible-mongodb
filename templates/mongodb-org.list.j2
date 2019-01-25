@@ -1,0 +1,27 @@
+{% if mongodb_version == '3.2' %}
+deb http://repo.mongodb.org/apt/ubuntu {{ mongodb_ubuntu_version }}/mongodb-org/3.2 multiverse
+
+{% elif mongodb_version == '3.4' %}
+  {% if mongodb_ubuntu_version == 'trusty' %}
+deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse
+  {% elif mongodb_ubuntu_version == 'xenial' %}
+deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse
+  {% endif %}
+
+{% elif mongodb_version == '3.6' %}
+  {% if mongodb_ubuntu_version == 'trusty' %}
+deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse
+  {% elif mongodb_ubuntu_version == 'xenial' %}
+deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse
+  {% endif %}
+
+{% elif mongodb_version == '4.0' %}
+  {% if mongodb_ubuntu_version == 'trusty' %}
+deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/4.0 multiverse
+  {% elif mongodb_ubuntu_version == 'xenial' %}
+deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse
+  {% elif mongodb_ubuntu_version == 'bionic' %}
+deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse
+  {% endif %}
+
+{% endif %}
