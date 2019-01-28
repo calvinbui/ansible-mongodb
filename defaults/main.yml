@@ -1,4 +1,4 @@
 ---
 
 mongodb_version: '3.4'
-mongodb_ubuntu_version: {{ ansible_distribution_release }}
+mongodb_ubuntu_version: "{{ ansible_distribution_release }}"
