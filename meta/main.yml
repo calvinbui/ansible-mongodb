@@ -8,7 +8,8 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - all
+        - xenial
+        - trusty
   galaxy_tags:
     - mongodb
 dependencies: []
