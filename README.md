@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.com/calvinbui/ansible-mongodb.svg?branch=master)](https://travis-ci.com/calvinbui/ansible-mongodb)
+![GitHub release](https://img.shields.io/github/release/calvinbui/ansible-mongodb.svg)
+![Ansible Quality Score](https://img.shields.io/ansible/quality/36551.svg)
+![Ansible Role](https://img.shields.io/ansible/role/d/36551.svg)
 
 # Ansible MongoDB
 
